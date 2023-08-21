@@ -31,7 +31,7 @@
 						<ul class="links">
 							<li><a href="{{ url_for('index') }}">Home</a></li>
 							<li><a href="{{ url_for('landing') }}">Landing</a></li>
-							<li><a href="generic.html">Generic</a></li>
+							<li><a href="{{ url_for('generic') }}">Generic</a></li>
 							<li><a href="elements.html">Elements</a></li>
 						</ul>
 						<ul class="actions stacked">
@@ -68,137 +68,29 @@
 										<h2>데이터 입력하기</h2>
 									</header>
 									<p><form action="{{ url_for('predict')}}"method="post">
-      										<input type="text" name="Time_under90(Min)" placeholder="산소포화도 90% 미만(분)" required="required" /></br>
-      										<input type="text" name="Snoring Size(1:mild,2:morderate,3:severe)" placeholder="코골이 크기(1: 거의 없음, 2: 약함, 3: 강함)" required="required" /></br>
-											<input type="text" name="SpO2_AVG" placeholder="평균 산소포화도(SpO2_AVG)" required="required" /></br>
-											<input type="text" name="SpO2_MIN" placeholder="최저 산소포화도(SpO2_MIN)" required="required" /></br>
-											<input type="text" name="BMI" placeholder="BMI" required="required" /></br>
-
+      										<input type="text" name="SpO2_AVG" placeholder="평균 산소포화도(SpO2_AVG)" required="required" /></br>
+											<input type="text" name="Snoring_Size_1_mild_2_morderate_3_severe_" placeholder="코골이크기(1,2,3)" required="required" /></br>
+											<input type="text" name="Time_under90_Min_" placeholder="산소포화도 90% 미만(분)" required="required" /></br>
+											
         										<button type="submit" class="btn btn-primary btn-block btn-large">예측하기</button>
-									{{ prediction_text }}
+
     								</form></p>
 								</div>
+									<div class = "inner">
+										<header class = "major">
+											<h2> {{ prediction_text }} </h2>
+												<ul class="actions">
+													<li><a href="{{ url_for('generic') }}" class="button next scrolly">자세히 알아보기</a></li>
+													<li><a href="{{ url_for('landing') }}" class="button next scrolly">다시 예측하기</a></li>
+
+												</ul>
+												
+										</header>
+									</div>
 							</section>
-
-						<!-- Two -->
-							<!--<section id="two" class="spotlights">
-								<section>
-									<a href="generic.html" class="image">
-										<img src="images/pic08.jpg" alt="" data-position="center center" />
-									</a>
-									<div class="content">
-										<div class="inner">
-											<header class="major">
-												<h3>Orci maecenas</h3>
-											</header>
-											<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
-											<ul class="actions">
-												<li><a href="generic.html" class="button">Learn more</a></li>
-											</ul>
-										</div>
-									</div>
-								</section>
-								<section>
-									<a href="generic.html" class="image">
-										<img src="images/pic09.jpg" alt="" data-position="top center" />
-									</a>
-									<div class="content">
-										<div class="inner">
-											<header class="major">
-												<h3>Rhoncus magna</h3>
-											</header>
-											<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
-											<ul class="actions">
-												<li><a href="generic.html" class="button">Learn more</a></li>
-											</ul>
-										</div>
-									</div>
-								</section>
-								<section>
-									<a href="generic.html" class="image">
-										<img src="images/pic10.jpg" alt="" data-position="25% 25%" />
-									</a>
-									<div class="content">
-										<div class="inner">
-											<header class="major">
-												<h3>Sed nunc ligula</h3>
-											</header>
-											<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
-											<ul class="actions">
-												<li><a href="generic.html" class="button">Learn more</a></li>
-											</ul>
-										</div>
-									</div>
-								</section>
-							</section>-->
-
-						<!-- Three -->
-							<!--<section id="three">
-								<div class="inner">
-									<header class="major">
-										<h2>Massa libero</h2>
-									</header>
-									<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.</p>
-									<ul class="actions">
-										<li><a href="generic.html" class="button next">Get Started</a></li>
-									</ul>
-								</div>
-							</section>-->
 
 					</div>
 
-				<!-- Contact -->
-					<!--<section id="contact">
-						<div class="inner">
-							<section>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="6"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Clear" /></li>
-									</ul>
-								</form>
-							</section>
-							<section class="split">
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-envelope"></span>
-										<h3>Email</h3>
-										<a href="#">information@untitled.tld</a>
-									</div>
-								</section>
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-phone"></span>
-										<h3>Phone</h3>
-										<span>(000) 000-0000 x12387</span>
-									</div>
-								</section>
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-home"></span>
-										<h3>Address</h3>
-										<span>1234 Somewhere Road #5432<br />
-										Nashville, TN 00000<br />
-										United States of America</span>
-									</div>
-								</section>
-							</section>
-						</div>
-					</section>-->
 
 				<!-- Footer -->
 					<footer id="footer">
