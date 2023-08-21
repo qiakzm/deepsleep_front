@@ -1,38 +1,45 @@
-# **데이터청년캠퍼스 : Deep Sleep**
+# **2023 데이터청년캠퍼스 : Deep Sleep**
 
-**Folder** is an app designed for older adults and their guardians, allowing their guardians to remotely monitor elderly's schedule and medication intake to care their well-being even from afar.
+**Deep Sleep** 은 스마트워치 데이터를 이용해 수면 무호흡증을 예측하는 서비스입니다. AHI 지수를 예측하여 수면무호흡증의 중증도를 알려줍니다.
 <br><br>
-![SolutionChallenge-Demo ver2](https://cdn.discordapp.com/attachments/1114839224361955328/1114883280685252618/SolutionChallenge-Demo_ver2.png)
+![DeepSleepDemo_Main1](https://github.com/alacori/deepsleep_front/assets/70925118/05c11306-ee42-4b64-b798-3db2ceab0d8e)
+![DeepSleepDemo_Main2](https://github.com/alacori/deepsleep_front/assets/70925118/a5d7d551-4ca6-4fe1-a7b3-c2639b2b4453)
 
 
-## 🛌 **주제선정**
-수면 무호흡증은 수면 중 좁은 기도에 공기가 통과하면서 호흡이 불규칙해지거나 일시적으로 멎는 수면장애 증상입니다. 일반적으로 1시간동안 10초 이상의 저호흡 또는 무호흡이 발생하는 평균 횟수인 AHI 지수가  5번 이상 일때 수면 무호흡으로 진단하고, 무호흡 발생 횟수에 따라 경증, 중증, 심증으로 나뉘게 됩니다. 수면 무호흡증은 단순히 호흡이 잠시 멈추는 것에 그치는 것이 아니라 장시간 산소를 공급받지 못해 뇌졸중 위험이 2배, 심근경색과 심장마비로 인한 사망위험이 2배, 심혈관계 질환으로 인한 사망 위험이 2배, 부정맥으로 인한 위험률이 57%로 심한 경우 사망에까지 이를 수 있는 질병입니다.
-이뿐만 아니라 수면 중 무호흡으로 인해 깸 현상이 자주 발생하게 되고, 이로 인한 수면의 질 저하는 주간 피로를 축적시킵니다. 또한 수면 중 이루어지는 다양한 정신적신〮체적 회복 능력에도 부정적인 영향을 미쳐 전체적인 삶의 질 저하로 이어지게 됩니다.
-
+## 🛌 **주제선정 및 프로젝트 배경**
+수면 무호흡증은 수면 중 호흡이 불규칙하거나 멈추는 장애로, 발생 빈도가 증가하고 위험성이 커지고 있습니다. 이로 인해 뇌졸중, 심근경색, 사망 등 다양한 위험이 증가하며 수면의 질 저하 및 주간 피로도 초래됩니다. 현재 진단은 병원에서의 복잡한 수면다원검사가 필요하지만, 이는 비용과 시간적 부담이 큽니다. 또한 1인 가구 증가로 수면 무호흡증 자각이 줄어드는 상황입니다. 따라서 스마트워치를 이용한 간편한 정보 수집으로 수면 무호흡증을 조기 예측하고 집에서도 관리할 수 있는 서비스를 개발하여, 치료와 삶의 질 개선에 기여하고자 하는 목적에서 "스마트워치를 이용한 수면 무호흡증 예측 서비스" 주제를 선정하게 되었습니다.
 <br><br>
 
-## 🎯 **Our Goal**
+## 📈 **PSG 분석**
+
+![](https://github.com/alacori/deepsleep_front/assets/70925118/f5fb1a60-981f-4186-a6bf-61664eb3e7f7)
+
+수면다원검사(PSG) 분석에서는 스마트워치로 측정 가능한 변수들을 기반으로 AHI와 연관성이 있는 변수를 추출해 분석을 진행하고, 최적의 모델을 찾아 수면 무호흡증의 여부와 더불어 중증도를 쉽게 알 수 있는 웹 서비스를 제공합니다.
+<br>
+<br>
+
+## 🫀 **ECG 분석**
 
 ![](https://i.ibb.co/pWFrbZr/our-goal.png)
 
-**Folder** aims to address UN Sustainable Development Goals (SDGs) 3. health and well-being, and 11. sustainable cities. The elderly can record their daily lives in Folder, and this record becomes a way for their loved ones to know their news without directly asking about it. 
-<br><br>
-**Folder** serves as a platform to enhance the bond between elderly and their guardians, facilitating a sense of social connectedness and stability for those who may be living alone elderly. Our overarching goal is to ensure that older adults feel a sense of belonging to a stable social community, promoting their overall well-being and quality of life.
+ECG 분석에서는 심전도의 심장 박동과 관련된 다양한 정보를 추출합니다. 그 중에서도 심박변이율(HRV)은 심장 박동의 불규칙성을 나타내는 지표로 활용됩니다. 이렇게 추출된 HRV 정보를 기반으로 수면 무호흡증을 예측하는 모델을 구축합니다. 이 모델은 수면과 호흡의 상관관계를 분석하여, 수면 중 무호흡증 발생 가능성을 예측하는 데 도움을 줍니다. 따라서 ECG 분석은 수면 무호흡증 예측 분야에서 매우 중요한 역할을 수행합니다.
+<br>
+<br>
+
+## 🎯 **기대효과**
+
+![](https://i.ibb.co/pWFrbZr/our-goal.png)
+
+먼저 스마트워치를 활용하여 간편하고 경제적인 방법으로 수면 무호흡증 예측이 가능합니다. 이는 복잡하고 비용이 많이 드는 수면다원검사(PSG) 대신 더 편리하게 수면 건강을 모니터링 할 수 있을 것입니다.<br>
+또한, 스마트워치와 웹 서비스를 통한 AHI 지수 예측과 위험도 정보 제공으로 수면 무호흡증의 조기 발견이 가능할 것입니다. 조기에 문제를 파악하고 조치함으로써 심각한 합병증을 피하고 건강한 수면을 유지할 수 있습니다.<br>
+마지막으로 스마트워치와 웹 서비스를 통한 AHI 모니터링으로 수면 무호흡증의 변화를 지속적으로 추적할 수 있습니다. 이를 통해 개인의 치료 효과를 평가하고 개선 여부를 확인할 수 있을 것입니다.
 <br>
 <br>
 
 ## 🛠 **Project Architecture**
 
 
-![](https://cdn.discordapp.com/attachments/1060472903793123353/1091251096619585587/folder_.png)
-
-<br>
-
-## 🎥 **Demo Video Link**
-
-<br>
-
-[![Folder Demo Video](https://cdn.discordapp.com/attachments/1060472903793123353/1091221192016416879/folder_youtube-001_2.jpg)](https://youtu.be/ulEupCBfHxA)
+![](https://github.com/alacori/deepsleep_front/assets/70925118/8b6efaf7-bd2c-469a-a051-e6e0d2746a1c)
 
 <br>
 
@@ -48,20 +55,13 @@
 
 <br> <br>
 
-## ▶ **Execution method**
 
-
-1. Download the apk file from [Google drive](https://drive.google.com/drive/folders/18OTfTitMM3pdO9my3RkllQjLjKCHKyje). 
-2. Run the apk file on your phone.
-
-
-<br>
 
 ## 👩‍💻 **Contributors**
 
-### **Team Four-tter**
+### **Team 3**
 
-|[오유정](https://github.com/ohyujeong)|[조유림](https://github.com/ofzlo)|[정시은](https://github.com/alacori)|[최다영](https://github.com/dayoung20)|
-|---|---|---|---|
-|<img src="https://i.ibb.co/hc3RPwT/Kakao-Talk-20230319-212123861.png">|<img src="https://cdn.discordapp.com/attachments/1091211029360422973/1091256442754957342/image.png" width=400>|<img src="https://cdn.discordapp.com/attachments/1091211029360422973/1091254304804970606/IMG_2057.png">|<img src="https://cdn.discordapp.com/attachments/1091211029360422973/1091253631673708595/KakaoTalk_20230331_155008862.png">|
-|Backend |ML|Frontend |Frontend|
+|[정시은](https://github.com/ohyujeong)|[주윤나](https://github.com/ofzlo)|[한준호](https://github.com/alacori)|[박유진](https://github.com/dayoung20)|[신예진](https://github.com/ohyujeong)|[최성림](https://github.com/dayoung20)|
+|---|---|---|---|---|---|
+|<img src="https://github.com/alacori/deepsleep_front/assets/70925118/7ad78f84-e390-444b-9607-6d4e064796a8">|<img src="https://github.com/alacori/deepsleep_front/assets/70925118/d3d3306a-7895-4553-8af0-a55ec13b180a">|<img src="https://github.com/alacori/deepsleep_front/assets/70925118/c637a24c-1dbd-40d0-ad47-6f222f69f109">|<img src="https://cdn.discordapp.com/attachments/1091211029360422973/1091253631673708595/KakaoTalk_20230331_155008862.png">|
+|PSG analysis|PSG analysis|PSG analysis|ECG analysis|ECG analysis|ECG analysis|
